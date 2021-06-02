@@ -1,0 +1,23 @@
+server:
+ port: 8081
+Spring:
+ datasource:
+  url: jdbc:mysql://localhost:3306/stockss
+  username: root
+  password: 1234
+  driver-class-name: com.mysql.jdbc.Driver
+ jpa:
+  database-platform: org.hibernate.dialect.MySQL8Dialect
+  hibernate.ddl-auto: update
+  show-sql: true 
+ redis:
+  host: localhost
+  port: 6379
+  timeout: 10000
+ cache: 
+  type: REDIS
+  redis:
+   cache-null-values: true
+   use-key-prefix: true
+   time-to-live: 60000 
+    
